@@ -1,0 +1,13 @@
+package com.Sridevi.Campushelpdesk;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class CampushelpdeskApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(CampushelpdeskApplication.class, args);
+	}
+
+}
