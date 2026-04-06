@@ -7,7 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class CampushelpdeskApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CampushelpdeskApplication.class, args);
+
+        SpringApplication.run(CampushelpdeskApplication.class, args);
 	}
 
 }

@@ -18,6 +18,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class TestController {
     private final UserRepository repository;
+    @GetMapping
+    public String test(){
+        return "JWT Working ✅";
+    }
     @GetMapping("/users")
     public String userTesting(){
         return "User API Working";
@@ -34,7 +38,7 @@ public class TestController {
         User user=repository.findByEmail(auth.getName()).orElseThrow(()->new UsernameNotFoundException("User Not Found"));
         return UserResponse.builder()
                 .userId(user.getUserId())
-                .regno(user.getRegno())
+                .regNo(user.getRegno())
                 .email(user.getEmail())
                 .userName(user.getUsername())
                 .accountStatus(user.getAccountStatus())

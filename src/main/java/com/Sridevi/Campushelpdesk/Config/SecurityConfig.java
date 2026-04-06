@@ -22,7 +22,7 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity security) throws Exception {
         security.csrf(csrf->csrf.disable())
                 .authorizeHttpRequests(request->
-                        request.requestMatchers("/login","/register").permitAll()
+                        request.requestMatchers("/login","/register","/otpverify").permitAll()
                                 .anyRequest().authenticated())
                 .authenticationProvider(provider)
                 .sessionManagement(session->session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))

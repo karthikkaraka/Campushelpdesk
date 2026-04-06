@@ -14,6 +14,6 @@ public class UserResponse {
     private long userId;
     private String userName;
     private String email;
-    private String regno;
+    private String regNo;
     private AccountStatus accountStatus;
 }

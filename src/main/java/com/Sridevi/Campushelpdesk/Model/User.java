@@ -2,10 +2,7 @@ package com.Sridevi.Campushelpdesk.Model;
 
 import com.Sridevi.Campushelpdesk.Enums.AccountStatus;
 import com.Sridevi.Campushelpdesk.Enums.UserRole;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -25,6 +22,7 @@ import java.util.List;
 @Builder
 public class User implements UserDetails {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long userId;
     private String userName;
     private String email;
